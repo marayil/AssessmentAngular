@@ -1,0 +1,9 @@
+<ng-container *ngIf="true">
+    <table *ngFor="let item of list let i=index" >
+        <tr ><td><input  readonly (dblclick)="editValue(i)" appHighlight  value={{item.name}} id="name" class="{{'new'+i}}"></td>
+        <td><input readonly appHighlight value={{item.age}} (dblclick)="editValue(i)" id="age" class="{{'new'+i}}" ></td>
+        <button hidden  type="button" id={{i}} class="{{'new'+i}}" (click)="submit(i)">save</button>
+      </tr>
+  
+    </table>
+  </ng-container>
